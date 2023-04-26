@@ -1,0 +1,81 @@
+@import "./variables.scss";
+
+.form-part-main{
+    background: rgba(47, 47, 47, 0.95);
+    box-shadow: 0px 0px 30px 4px rgba(232, 232, 232, 0.4);
+    border-radius: 10px;
+    margin-top: 100px;
+    display: flex;
+    .img-part{
+        width: 40%;
+        background-image: linear-gradient(rgba(47, 47, 47, 0.6), rgba(47, 47, 47, 0.6)), url('../images/imageform-img.png');
+        background-size: cover;
+        background-position: center;
+        @media(max-width: 1030px){
+            display: none;
+        }
+    }
+    .desc-part{
+        padding: 100px 70px;
+        width: 60%;
+        @media(max-width: 1030px){
+            width: 100%;
+        }
+        @media(max-width:550px){
+            padding: 20px;
+        }
+        h1{
+            font-size: 31px;
+            line-height: 1.4;
+            color: #fff;
+            @media(max-width:600px){
+                font-size: 25px;
+            }
+        }
+        form{
+            margin-top: 44px;
+            .inputs{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                row-gap: 30px;
+                @media(max-width:1230px){
+                    flex-direction: column;
+                }
+                input{
+                    border: 1px solid #FFFFFF;
+                    border-radius: 10px;
+                    padding: 18px 30px;
+                    color: #fff;
+                    opacity: 0.35;
+                    background-color: transparent;
+                    outline: none;
+                    font-size: 16px;
+                    line-height: 1.2;
+                    width: 230px;
+                    &:nth-of-type(3){
+                        width: 100%;
+                    }
+                    @media(max-width:1230px){
+                        width: 100%;
+                    }
+                }
+            }
+            .form-footer{
+                margin-top: 30px;
+                color: #fff;
+                opacity: 0.35;
+                
+                button{
+                    margin-left: 50px;
+                    @media(max-width: 1030px){
+                        display: block;
+                        margin-left: 50%;
+                        transform: translateX(-50%);
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

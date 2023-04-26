@@ -1,0 +1,64 @@
+@import "./variables.scss";
+
+.bags{
+    padding: 30px 0;
+}
+
+.bags-main{
+    @media(max-width:1200px){
+        width: 600px;
+        margin: auto;
+    }
+    @media(max-width:750px){
+        width: auto;
+    }
+    .headings{
+        display: flex;
+        justify-content: space-between;
+        @media(max-width:1200px){
+            flex-wrap: wrap;
+        }
+        @media(max-width:750px){
+            gap: 20px;
+            justify-content: center;
+        }
+        .heading-part{
+            width: 265px;
+            display: grid;
+            place-items: center;
+            h3{
+                color: #000;
+                opacity: 0.7;
+                padding: 40px 50px;
+                border-bottom: 5px solid #fff;
+                &:hover{
+                    opacity: 1;
+                    border-bottom: 5px solid $sariq;
+                }
+            }
+        }
+    }
+
+    .bag-cards{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        @media(max-width:1200px){
+            flex-wrap: wrap;
+            row-gap: 30px;
+        }
+        @media(max-width:750px){
+            gap: 20px;
+            justify-content: center;
+        }
+        .bag-card{
+            width: 265px;
+            height: 306px;
+            border: 1px solid #A3A3A3;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+        }
+    }
+
+}

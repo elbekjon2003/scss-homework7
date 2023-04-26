@@ -1,0 +1,90 @@
+@import "./variables.scss";
+
+header{
+    background-color: $mainTextColor;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .logo{
+        width: 95px;
+    }
+    label{
+        font-size: 22px;
+        color: #fff;
+        display: none;
+        @media(max-width:720px){
+            display: block;
+        }
+    }
+    #check{
+        display: none;
+        &:checked ~ .nav-links{
+            transform: translateX(0);
+        }
+    }
+    .nav-links{
+        display: flex;
+        align-items: center;
+        gap: 90px;
+        @media(max-width:850px){
+            gap: 50px;
+        }
+        @media(max-width:720px){
+            position: fixed;
+            justify-content: center;
+            flex-direction: column;
+            width: 60%;
+            height: calc(100vh - 90px);
+            background-color: $mainTextColor;
+            left: 0;
+            top: 90px;
+            transform: translateX(-100%);
+            transition: all 0.4s ease-in-out;
+        }
+        @media(max-width:500px){
+            width: 100%;
+        }
+        ul{
+            display: flex;
+            gap: 40px;
+            @media(max-width:850px){
+                gap: 30px;
+            }
+            @media(max-width:720px){
+                flex-direction: column;
+            }
+            li{
+                font-size: 16px;
+                line-height: 26px;
+                color: $secondaryTextColor;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+        
+    }
+}
+.btn{
+    padding: 15px 30px;
+    font-size: 16px;
+    line-height: 1.2;
+    background-color: transparent;
+    border: 1px solid $sariq;
+    border-radius: 6px;
+    color: $sariq;
+    transition: 0.3s;
+    &:hover{
+        background-color: $sariq;
+        color: #fff;
+    }
+}

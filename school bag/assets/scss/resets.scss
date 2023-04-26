@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.container{
+    width: 1150px;
+    margin: auto;
+    max-width: 90%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+img{
+    max-width: 100%;
+}
+button{
+    cursor: pointer;
+}
